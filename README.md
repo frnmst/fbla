@@ -1,6 +1,6 @@
 # fbla
 
-Bash library of assertions
+A Bash library of assertions
 
 ## Table of contents
 
