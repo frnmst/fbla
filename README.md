@@ -16,15 +16,15 @@ Bash library of assertions
 
 - `assert_isinstance`
 
-    prototype: assert_isinstance(value,type)
-    input:
-        value = <any value>
-        type  = 'bool','int','str'
-    output:
-        return 0    if true
-        return 1    if false
-    notes:
-        everything evaluates to a string, even an empty variable
+      prototype: assert_isinstance(value,type)
+      input:
+          value = <any value>
+          type  = 'bool','int','str'
+      output:
+          return 0    if true
+          return 1    if false
+      notes:
+          everything evaluates to a string, even an empty variable
 
 
 ## Version
