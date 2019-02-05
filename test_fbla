@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+. ./fbla
+
+test_assert_isinstance()
+{
+    assert_isinstance '' bool \
+        || { assert_isinstance 'true'  '' \
+        || { assert_isinstance ''  '' \
+        || { assert_isinstance 'true' boo \
+        || { assert_isinstance 'true' bool \
+        && { assert_isinstance 'false' bool \
+        && { assert_isinstance 'strue' bool \
+        || { assert_isinstance 'strue' str \
+        && { assert_isinstance 'true' str \
+        && { assert_isinstance '' str \
+        && { assert_isinstance 'strue bye' str \
+        && { assert_isinstance '123' str \
+        && { assert_isinstance '123' int \
+        && { assert_isinstance '1 0' int \
+        || { assert_isinstance '1 a' int \
+        || { printf "%s\n" 'ok'; return 0; }; }; }; }; }; }; }; }; }; }; }; }; }; }; }
+        printf "%s\n" 'assertion error' 2>&1; return 1;
+}
+
+test_assert_isinstance
