@@ -8,24 +8,28 @@ Bash library of assertions
 
 ## Functions
 
-| Function name | Description |
-|---------------|-------------|
-| `assert_isinstance` | checks if a variable correponds to a data type |
+| Function name | Description | Notes |
+|---------------|-------------|-------|
+| assert_isinstance | checks if a variable correponds to a data type | every input evaluates to a string |
 
-### Detailed description
 
-- `assert_isinstance`
+### Key
 
-      prototype: assert_isinstance(value,type)
+- every element between `<` and `>` is to be considered pseudocode.
+- list of values are presented in this format: `'value a','value b','value n'`
+
+### Function description
+
+- assert_isinstance
+
+      prototype:
+          assert_isinstance(value,type)
       input:
-          value = <any value>
+          value = <any value including an empty string>
           type  = 'bool','int','str'
       output:
-          return 0    if true
-          return 1    if false
-      notes:
-          everything evaluates to a string, even an empty variable
-
+          return 0 <if true>
+          return 1 <if false>
 
 ## Version
 
