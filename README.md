@@ -6,19 +6,35 @@ Bash library of assertions
 
 [](TOC)
 
+- [fbla](#fbla)
+    - [Table of contents](#table-of-contents)
+    - [Functions](#functions)
+        - [Key](#key)
+        - [Function descriptions](#function-descriptions)
+    - [Version](#version)
+    - [Usage](#usage)
+    - [Bashisms](#bashisms)
+    - [GNU Bash "strict mode"](#gnu-bash-strict-mode)
+    - [Conventions](#conventions)
+    - [Dependencies](#dependencies)
+    - [Tests](#tests)
+    - [Software using fbla](#software-using-fbla)
+    - [License](#license)
+
+[](TOC)
+
 ## Functions
 
 | Function name | Description | Notes |
 |---------------|-------------|-------|
-| assert_isinstance | checks if a variable correponds to a data type | every input evaluates to a string |
-
+| assert_isinstance | checks if a variable correponds to a data type | every input evaluates to a string. [Python 3 data type names](https://docs.python.org/3/library/stdtypes.html) are used for type identification |
 
 ### Key
 
 - every element between `<` and `>` is to be considered pseudocode.
 - list of values are presented in this format: `'value a','value b','value n'`
 
-### Function description
+### Function descriptions
 
 - assert_isinstance
 
@@ -95,6 +111,8 @@ of course installed on your system.
 You can run tests like this:
 
     $ ./test_fbla
+
+These also serve as usage example.
 
 ## Software using fbla
 
